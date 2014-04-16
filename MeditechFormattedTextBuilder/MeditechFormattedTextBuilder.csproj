@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0675E693-6760-4F36-B20B-7CDF802859F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MeditechFormattedTextBuilder</RootNamespace>
+    <AssemblyName>MeditechFormattedTextBuilder</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Document Nodes\DocumentNode.cs" />
+    <Compile Include="Document Nodes\DocumentNodeCollection.cs" />
+    <Compile Include="Document Nodes\EndDocumentNode.cs" />
+    <Compile Include="Document Nodes\EscapeDocumentNode.cs" />
+    <Compile Include="Document Nodes\NewLineDocumentNode.cs" />
+    <Compile Include="Document Nodes\StartDocumentNode.cs" />
+    <Compile Include="Document Nodes\TextDocumentNode.cs" />
+    <Compile Include="Escape Sequences\EscapeSequence.cs" />
+    <Compile Include="Escape Sequences\EscapeSequenceCollection.cs" />
+    <Compile Include="Escape Sequences\HighlightEscapeSequence.cs" />
+    <Compile Include="Escape Sequences\ItalicEscapeSequence.cs" />
+    <Compile Include="Escape Sequences\LocalEscapeSequence.cs" />
+    <Compile Include="Escape Sequences\NormalEscapeSequence.cs" />
+    <Compile Include="Escape Sequences\UnderlineEscapeSequence.cs" />
+    <Compile Include="FormattedTextDocument.cs" />
+    <Compile Include="IndentedStringBuilder.cs" />
+    <Compile Include="LineLengthException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Licence.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
